@@ -64,7 +64,7 @@ def password_validator(input_pw: str, min_chars=8, max_chars=30, lower_char=True
     for key, val in conditions_dict.items():
         # Conduting the tests
         if not re.search(val, input_pw):
-            errors_list.append(key)
+            errors_list.append(key.replace("_", " "))
         else:
             passed_conditions_int += 1
 
